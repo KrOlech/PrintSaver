@@ -1,10 +1,12 @@
 from functools import cache
 
 
-class Leyer:
+class Layer:
 
-    def __init__(self, line: str):
+    def __init__(self, line: str, lineNumber: int, lastLayerNumber: int):
         self.line = line
+        self.lineNumber = lineNumber
+        self.lastLayerNumber = lastLayerNumber
 
     @property
     @cache
@@ -21,3 +23,6 @@ class Leyer:
 
     def __resolveHeight(self):
         ...
+
+    def __str__(self):
+        return f"{self.hight} {self.lastLayerNumber}-{self.lineNumber}"

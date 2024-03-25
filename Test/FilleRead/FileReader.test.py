@@ -8,5 +8,7 @@ def test_readAndSlice():
 
     fileReader.readFile()
 
+    fileReader.saveFileHigherThan(2, removeHome=True)
+
 
 test_readAndSlice()
